@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151917">
+  <title>BI Pub Quiz</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/game.js" defer></script>
+</head>
+<body>
+  <header class="top"><a href="/" class="brand"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span> BI Pub Quiz</a><span class="top-note">2–8 players · 15 questions</span></header>
+  <main id="app"></main>
+  <p id="status" class="status" role="status"></p>
+  <template id="home">
+    <div class="entrance">
+      <section class="intro">
+        <p class="eyebrow">THE DATA NIGHT OUT</p>
+        <h1>BI Pub<br>Quiz<span>.</span></h1>
+        <p class="lead">Get your team together for a live quiz on business intelligence, charts and Qlik.</p>
+        <ol class="rounds"><li><b>01</b> BI Basics</li><li><b>02</b> Read the Chart</li><li><b>03</b> Data &amp; Qlik</li></ol>
+      </section>
+      <section class="panel entry">
+        <h2>Take your seat</h2>
+        <label for="nickname">Nickname</label>
+        <input id="nickname" maxlength="24" autocomplete="nickname" placeholder="e.g. Chart Toppers" required>
+        <form id="join"><label for="code">Room code</label><div class="join-row">
+          <input id="code" name="code" maxlength="5" pattern="[A-Za-z2-9]{5}" placeholder="ABCDE" required autocapitalize="characters" spellcheck="false">
+          <button type="submit">Join room</button>
+        </div></form>
+        <div class="divider"><span>or</span></div>
+        <button type="button" class="outline" id="create">Host a new quiz</button>
+      </section>
+    </div>
+  </template>
+</body>
+</html>
